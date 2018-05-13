@@ -5,9 +5,273 @@
     tools:context="com.example.delme.smartair.Fragments.OverviewFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/outside_conditions"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20sp"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/ic_size"
+                android:layout_height="@dimen/ic_size"
+                android:background="@drawable/ic_sun"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/ic_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temperatura exterior: "
+                android:textSize="@dimen/tv_info"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/outside_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="18 ºC"
+                android:textSize="@dimen/tv_data"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/ic_size"
+                android:layout_height="@dimen/ic_size"
+                android:background="@drawable/ic_weather_snowy_rainy"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/ic_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humedad exterior: "
+                android:textSize="@dimen/tv_info"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/outside_moisture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="58 %HR"
+                android:textSize="@dimen/tv_data"
+                android:layout_weight="2"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/ic_color"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Condiciones interiores"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20sp"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/ic_size"
+                android:layout_height="@dimen/ic_size"
+                android:background="@drawable/ic_home_assistant"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/ic_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Calidad del aire: "
+                android:textSize="@dimen/tv_info"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/air_quality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="95/100"
+                android:textSize="@dimen/tv_data"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="34dp"
+                android:layout_height="@dimen/ic_size"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_thermometer_lines"
+                android:backgroundTint="@color/ic_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temperatura interior: "
+                android:textSize="@dimen/tv_info"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/inside_temp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="24 ºC"
+                android:textSize="@dimen/tv_data"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/ic_size"
+                android:layout_height="@dimen/ic_size"
+                android:background="@drawable/ic_water_percent"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/ic_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humedad interior: "
+                android:textSize="@dimen/tv_info"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/inside_moisture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="40 %HR"
+                android:textSize="@dimen/tv_data"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/ic_size"
+                android:layout_height="@dimen/ic_size"
+                android:background="@drawable/ic_leaf"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/ic_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oxígeno: "
+                android:textSize="@dimen/tv_info"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/oxygen_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20.80 %"
+                android:textSize="@dimen/tv_data"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="@dimen/ic_size"
+                android:layout_height="@dimen/ic_size"
+                android:background="@drawable/ic_periodic_table_co2"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/ic_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dioxido de carbono: "
+                android:textSize="@dimen/tv_info"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/co2_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="523 ppm"
+                android:textSize="@dimen/tv_data"
+                android:layout_weight="2"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </FrameLayout>
