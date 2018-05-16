@@ -4,10 +4,253 @@
     android:layout_height="match_parent"
     tools:context="com.example.delme.smartair.Fragments.PlanesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/planesFragment_infoText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Piso en la playa"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/planesFragment_infoText"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="2dp"
+                />
+
+            <ImageView
+                android:id="@+id/planesFragment_planeImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="350dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/planesFragment_infoText"
+                android:src="@drawable/plano" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/planesFragment_planeImageView"
+                android:background="@android:color/darker_gray"
+                />
+
+            <TextView
+                android:id="@+id/planesFragment_spinnerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/planesFragment_planeImageView"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:text="Selecciona una estancia"
+                android:textSize="18dp"/>
+
+            <Spinner
+                android:id="@+id/planesFragment_spinnerCat"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/planesFragment_spinnerText"/>
+
+
+            <LinearLayout
+                android:id="@+id/planesFragment_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/planesFragment_spinnerCat"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/ic_size"
+                        android:layout_height="@dimen/ic_size"
+                        android:background="@drawable/ic_home_assistant"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/ic_color"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calidad del aire: "
+                        android:textSize="@dimen/planes_info"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/air_quality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="95/100"
+                        android:textSize="@dimen/planes_data"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="@dimen/ic_size"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/ic_thermometer_lines"
+                        android:backgroundTint="@color/ic_color"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Temperatura interior: "
+                        android:textSize="@dimen/planes_info"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black"/>
+
+                    <TextView
+                        android:id="@+id/inside_temp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24 ºC"
+                        android:textSize="@dimen/planes_data"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/ic_size"
+                        android:layout_height="@dimen/ic_size"
+                        android:background="@drawable/ic_water_percent"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/ic_color"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Humedad interior: "
+                        android:textSize="@dimen/planes_info"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/inside_moisture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="40 %HR"
+                        android:textSize="@dimen/planes_data"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/ic_size"
+                        android:layout_height="@dimen/ic_size"
+                        android:background="@drawable/ic_leaf"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/ic_color"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Oxígeno: "
+                        android:textSize="@dimen/planes_info"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/oxygen_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20.80 %"
+                        android:textSize="@dimen/planes_data"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="@dimen/ic_size"
+                        android:layout_height="@dimen/ic_size"
+                        android:background="@drawable/ic_periodic_table_co2"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:backgroundTint="@color/ic_color"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dioxido de carbono: "
+                        android:textSize="@dimen/planes_info"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/co2_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="523 ppm"
+                        android:textSize="@dimen/planes_data"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
 
 </FrameLayout>

@@ -12,6 +12,17 @@
     <string name="suggestions">Sugerencias</string>
     <string name="about">Acerca De</string>
 
+    <string-array name="homeCat">
+        <item>General</item>
+        <item>Salón</item>
+        <item>Cocina</item>
+        <item>Estudio</item>
+        <item>Dormitorio pequeño</item>
+        <item>Dormitorio grande</item>
+        <item>Baño pequeño</item>
+        <item>Baño grande</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="outside_conditions">Condiciones exteriores</string>
