@@ -12,6 +12,93 @@
         android:id="@+id/frameContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/contentMain_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="SmartAir"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textSize="18dp"
+                android:textStyle="italic"
+                android:text="Mejora tu calida de vida"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_above="@+id/contentMain_emailEdit"
+                android:layout_marginBottom="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher_round"/>
+
+            <EditText
+                android:id="@+id/contentMain_emailEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:hint="Email"/>
+
+            <EditText
+                android:id="@+id/contentMain_passEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/contentMain_emailEdit"
+                android:hint="Contraseña"/>
+
+
+            <TextView
+                android:id="@+id/contentMain_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:textSize="18dp"
+                android:visibility="gone"
+                android:layout_below="@+id/contentMain_passEdit"
+                android:text="Bienvenido: amicomillan@gmail.com"/>
+
+            <RelativeLayout
+                android:id="@+id/contentMain_register"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Regístrate para tener las máximas ventajas"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
