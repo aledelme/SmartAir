@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "705953325750",
+    "firebase_url": "https://smartair-1d5a8.firebaseio.com",
+    "project_id": "smartair-1d5a8",
+    "storage_bucket": "smartair-1d5a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705953325750:android:85ac2719ba2da6b7",
+        "android_client_info": {
+          "package_name": "com.example.delme.smartair"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705953325750-ula7djbetq6otjjarkoncbs5l5e2b05m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.delme.smartair",
+            "certificate_hash": "bef46934e82d48de4178ac856d67536f07b9a0e1"
+          }
+        },
+        {
+          "client_id": "705953325750-0l2849ak4l3dmbkjk8l83foq0i4g41td.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1-tnzkMPdeBSxOGzPcdr442DidJcfFoA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705953325750-0l2849ak4l3dmbkjk8l83foq0i4g41td.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
