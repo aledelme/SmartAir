@@ -99,7 +99,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        android:id="@+id/air_quality"
+                        android:id="@+id/planesFragment_quality"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="95/100"
@@ -133,7 +133,7 @@
                         android:textColor="@android:color/black"/>
 
                     <TextView
-                        android:id="@+id/inside_temp"
+                        android:id="@+id/planesFragment_temp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="24 ºC"
@@ -167,7 +167,7 @@
                         android:textColor="@android:color/black" />
 
                     <TextView
-                        android:id="@+id/inside_moisture"
+                        android:id="@+id/planesFragment_humidity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="40 %HR"
