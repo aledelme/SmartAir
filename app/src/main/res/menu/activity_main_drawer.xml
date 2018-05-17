@@ -24,10 +24,6 @@
             android:id="@+id/nav_suggestions"
             android:icon="@drawable/ic_check_circle"
             android:title="@string/suggestions" />
-        <item
-            android:id="@+id/nav_about"
-            android:icon="@drawable/ic_info_outline"
-            android:title="@string/about" />
 
     </group>
 
