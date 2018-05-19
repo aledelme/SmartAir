@@ -157,7 +157,6 @@ public class ConfigurationsFragment extends Fragment {
         return view;
     }
 
-
     public void setSystemActivated(boolean setter){
         tvActivateAutomatic.setEnabled(setter);
         swActivateAutomatic.setEnabled(setter);

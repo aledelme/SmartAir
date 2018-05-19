@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white"
     tools:context="com.example.delme.smartair.Fragments.ConsumptionFragment">
 
@@ -9,26 +10,71 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/tv_data"
-                android:textColor="@android:color/black"
-                android:layout_gravity="center_horizontal"
-                android:text="Consumo energético de este mes" />
+                <TextView
+                    android:padding="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/tv_data"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Consumo energético de este mes" />
 
-            <com.github.mikephil.charting.charts.PieChart
-                android:id="@+id/monthly_consumption"
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/monthly_consumption"
+                    android:layout_width="match_parent"
+                    android:layout_height="320sp">
+                </com.github.mikephil.charting.charts.PieChart>
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="400dp">
-            </com.github.mikephil.charting.charts.PieChart>
-        </android.support.v7.widget.CardView>
+                android:layout_height="1dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/ic_color"/>
+
+                <TextView
+                    android:padding="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/tv_data"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Previsión de consumo energetico con sistema convencional" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/predicted_consumption"
+                    android:layout_width="match_parent"
+                    android:layout_height="320sp">
+                </com.github.mikephil.charting.charts.PieChart>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/ic_color"/>
+
+                <TextView
+                    android:padding="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/tv_data"
+                    android:textColor="@android:color/black"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Ahorro enérgetico" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/energy_saved"
+                    android:layout_width="match_parent"
+                    android:layout_height="320sp">
+                </com.github.mikephil.charting.charts.PieChart>
+
+        </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
