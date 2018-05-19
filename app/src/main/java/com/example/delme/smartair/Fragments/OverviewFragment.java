@@ -19,10 +19,10 @@ import java.util.Locale;
  */
 public class OverviewFragment extends Fragment {
 
-    NumerosAleatorios numerosAleatorios = new NumerosAleatorios();
     TextView outTemp, outHum, inTemp, inHum, oxyLvl, co2Lvl, airQlt;
-    double rangos[][] = {{18.9, 19.1}, {55.2, 55.4}, {23.9, 24.1}, {49.8, 50.0}, {20.7, 20.8}, {515.0, 520.2}};
+    double rangos[][] = {{18.9, 19.1}, {55.2, 55.4}, {23.9, 24.1}, {49.8, 50.0}, {20.7, 20.8}, {515, 517}};
     double resultados[] = new double[6];
+    double estandares[] = {24,45,20.8,450};
 
     public OverviewFragment() {
         // Required empty public constructor
@@ -40,9 +40,17 @@ public class OverviewFragment extends Fragment {
         co2Lvl = view.findViewById(R.id.co2_level);
         airQlt = view.findViewById(R.id.air_quality);
 
-        numerosAleatorios.execute();
+        new NumerosAleatorios().execute();
 
         return view;
+    }
+
+    public int calculateAirQuality(){
+        double airQuality = 0;
+        for(int i = 0; i < estandares.length; i++){
+            airQuality = airQuality + (1-Math.abs(estandares[i]-resultados[i+2])/estandares[i])*100;
+        }
+        return (int)airQuality / 4;
     }
 
     private class NumerosAleatorios extends AsyncTask<Void, Void, Void> {
@@ -62,14 +70,16 @@ public class OverviewFragment extends Fragment {
             inTemp.setText(String.format(Locale.getDefault(), "%.1f", resultados[2]) + " ºC");
             inHum.setText(String.format(Locale.getDefault(), "%.1f", resultados[3]) + " %HR");
             oxyLvl.setText(String.format(Locale.getDefault(), "%.1f", resultados[4]) + " %");
-            co2Lvl.setText(String.format(Locale.getDefault(), "%.1f", resultados[5]) + " ppm");
+            co2Lvl.setText(String.format(Locale.getDefault(), "%.0f", resultados[5]) + " ppm");
+            airQlt.setText(calculateAirQuality() + "/100");
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    NumerosAleatorios repetir = new NumerosAleatorios();
-                    repetir.execute();
+                    new NumerosAleatorios().execute();
+//                    NumerosAleatorios repetir = new NumerosAleatorios();
+//                    repetir.execute();
                 }
             },2000);
         }

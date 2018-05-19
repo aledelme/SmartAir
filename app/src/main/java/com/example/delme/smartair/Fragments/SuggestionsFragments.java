@@ -19,6 +19,7 @@ public class SuggestionsFragments extends Fragment {
         // Required empty public constructor
     }
 
+    //https://www.siberzone.es/blog-sistemas-ventilacion/niveles-recomendados-co2-temperatura/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

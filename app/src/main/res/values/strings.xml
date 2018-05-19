@@ -26,4 +26,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="outside_conditions">Condiciones exteriores</string>
+    <string name="activate_system">Activar sistema</string>
+    <string name="activate_automatic">Activar funcionamiento automático (recomendado)</string>
+    <string name="allow_manual">Permitir configuración manual de estáncias</string>
+    <string name="set_temp">Fijar temperatura manual</string>
 </resources>
