@@ -37,20 +37,12 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private TextView infoUser;
-    private FirebaseAuth mAuth;
-    private RelativeLayout main;
-    private EditText emailEd, passwordEd;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAuth = FirebaseAuth.getInstance();
-
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
@@ -59,81 +51,14 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = headerView.findViewById(R.id.navigationView_user);
+        navUsername.setText(getIntent().getStringExtra("email"));
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Fierbase signin
-        RelativeLayout register = findViewById(R.id.contentMain_register);
-        main = findViewById(R.id.contentMain_main);
-        infoUser = findViewById(R.id.contentMain_user);
-        emailEd = findViewById(R.id.contentMain_emailEdit);
-        passwordEd = findViewById(R.id.contentMain_passEdit);
-
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                // Obtenemos el texto de los EditTexts
-                String email = emailEd.getText().toString();
-                String password = passwordEd.getText().toString();
-
-                if (correoValido(email) && password.length() > 5){
-
-                    mAuth.createUserWithEmailAndPassword(email, password)
-                            .addOnCompleteListener(MainActivity.this,
-                                    new OnCompleteListener<AuthResult>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<AuthResult> task) {
-
-                                            FirebaseUser user = mAuth.getCurrentUser();
-                                            updateUI(user);
-
-                                            if (!task.isSuccessful()) {
-
-                                                if (task.getException().getMessage().
-                                                        contains("badly formatted")){
-                                                    Snackbar.make(
-                                                            main,
-                                                            "Correo incorrecto",
-                                                            Snackbar.LENGTH_SHORT).show();
-                                                }
-                                                updateUI(null);
-                                            }
-
-                                        }
-                                    });
-                } else {
-                    Snackbar.make(main, "Datos de registo incorrectos",
-                            Snackbar.LENGTH_SHORT).show();
-                }
-            }
-        });
+        cambiarFragment(new OverviewFragment());
     }
 
-
-    private boolean correoValido(String correo) {
-        if (!Patterns.EMAIL_ADDRESS.matcher(correo).matches()) {
-            emailEd.setError("Email invalido");
-            return false;
-        } else { emailEd.setError(null); }
-
-        return true;
-    }
-
-    private void updateUI(FirebaseUser user){
-
-        if (user != null) {
-            infoUser.setText("Bienvenido " + user.getEmail());
-
-            findViewById(R.id.contentMain_user).setVisibility(View.VISIBLE);
-            findViewById(R.id.contentMain_passEdit).setVisibility(View.INVISIBLE);
-            findViewById(R.id.contentMain_emailEdit).setVisibility(View.INVISIBLE);
-
-        } else {
-            findViewById(R.id.contentMain_user).setVisibility(View.INVISIBLE);
-            findViewById(R.id.contentMain_passEdit).setVisibility(View.VISIBLE);
-            findViewById(R.id.contentMain_emailEdit).setVisibility(View.VISIBLE);
-        }
-    }
 
     @Override
     public void onBackPressed() {
