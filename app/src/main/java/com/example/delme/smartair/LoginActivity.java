@@ -9,6 +9,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -100,6 +101,7 @@ public class LoginActivity extends Activity {
                                                     LoginActivity.this,
                                                     MainActivity.class);
                                             i.putExtra("email",user.getEmail());
+                                            Toast.makeText(getApplicationContext(),"Bienvenido",Toast.LENGTH_SHORT).show();
                                             startActivity(i);
 
                                             // Si firebase nos devuelve un error, le deimos al usuario que

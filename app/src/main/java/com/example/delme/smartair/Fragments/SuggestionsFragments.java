@@ -14,7 +14,6 @@ import com.example.delme.smartair.R;
  */
 public class SuggestionsFragments extends Fragment {
 
-
     public SuggestionsFragments() {
         // Required empty public constructor
     }

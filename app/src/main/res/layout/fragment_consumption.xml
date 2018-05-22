@@ -44,7 +44,7 @@
                     android:textSize="@dimen/tv_data"
                     android:textColor="@android:color/black"
                     android:layout_gravity="center_horizontal"
-                    android:text="Previsión de consumo energetico con sistema convencional" />
+                    android:text="Previsión de consumo energético con sistema convencional" />
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/predicted_consumption"

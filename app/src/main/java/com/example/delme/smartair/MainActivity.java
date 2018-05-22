@@ -37,12 +37,14 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity
         navUsername.setText(getIntent().getStringExtra("email"));
         navigationView.setNavigationItemSelectedListener(this);
 
+        setTitle(getResources().getString(R.string.overview));
         cambiarFragment(new OverviewFragment());
     }
 
@@ -119,6 +122,7 @@ public class MainActivity extends AppCompatActivity
                 break;
         }
 
+        setTitle(item.getTitle());
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -130,6 +134,5 @@ public class MainActivity extends AppCompatActivity
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                 .disallowAddToBackStack()
                 .commit();
-        return;
     }
 }

@@ -20,6 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textStyle="bold"
                 android:textSize="@dimen/tv_info"
                 android:text="@string/activate_system"
                 android:layout_weight="1"/>
@@ -40,6 +41,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:background="@color/ic_color"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,16 +82,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_allow_manual"
+                android:id="@+id/tv_activate_manual_temp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:textSize="@dimen/tv_info"
-                android:text="@string/allow_manual"
+                android:text="@string/allow_manual_temp"
                 android:layout_weight="1"/>
 
             <Switch
-                android:id="@+id/switch_allow_manual"
+                android:id="@+id/switch_activate_manual_temp"
                 android:checked="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -136,6 +138,41 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
             android:background="@color/ic_color"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_allow_manual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/tv_info"
+                android:text="@string/allow_manual"
+                android:layout_weight="1"/>
+
+            <Switch
+                android:id="@+id/switch_allow_manual"
+                android:checked="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/ic_color"/>
+
+
 
     </LinearLayout>
 
