@@ -11,6 +11,7 @@
     <string name="consumption">Consumo</string>
     <string name="suggestions">Sugerencias</string>
     <string name="about">Acerca De</string>
+    <string name="ar">Realidad Aumentada</string>
 
     <string-array name="homeCat">
         <item>General</item>

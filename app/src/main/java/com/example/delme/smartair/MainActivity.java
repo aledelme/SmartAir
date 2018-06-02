@@ -23,6 +23,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.delme.smartair.Fragments.ARFragment;
 import com.example.delme.smartair.Fragments.ConsumptionFragment;
 import com.example.delme.smartair.Fragments.OverviewFragment;
 import com.example.delme.smartair.Fragments.PlanesFragment;
@@ -119,6 +120,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_suggestions:
                 cambiarFragment(new SuggestionsFragments());
+                break;
+            case R.id.nav_ar:
+                cambiarFragment(new ARFragment());
                 break;
         }
 

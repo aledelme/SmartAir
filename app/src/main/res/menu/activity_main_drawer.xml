@@ -33,4 +33,13 @@
             android:title="@string/suggestions" />
     </group>
 
+    <group
+        android:id="@+id/menu3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ar"
+            android:icon="@drawable/ic_data_usage"
+            android:title="@string/ar" />
+    </group>
+
 </menu>
