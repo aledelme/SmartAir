@@ -42,19 +42,22 @@
                     android:layout_height="70dp">
 
                     <TextView
+                        android:id="@+id/suggestions_text1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="5dp"
                         android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/suggestions_chev1"
                         android:text="Recuerda ventilar el dormitorio cada mañana"
                         android:textSize="17dp"/>
 
                     <ImageView
+                        android:id="@+id/suggestions_chev1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="5dp"
                         android:src="@drawable/ic_chevron_right_grey600_48dp"/>
 
                 </RelativeLayout>
@@ -70,19 +73,22 @@
                     android:layout_height="70dp">
 
                     <TextView
+                        android:id="@+id/suggestions_text2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/suggestions_chev2"
                         android:text="Cuando haga poniente, baja las persianas del dormitorio pequeño y mantener la casa fresca"
                         android:textSize="17dp"/>
 
                     <ImageView
+                        android:id="@+id/suggestions_chev2"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="5dp"
                         android:src="@drawable/ic_chevron_right_grey600_48dp"/>
 
                 </RelativeLayout>
@@ -98,19 +104,22 @@
                     android:layout_height="70dp">
 
                     <TextView
+                        android:id="@+id/suggestions_text3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@+id/suggestions_chev3"
                         android:text="En invierno sube las persianas del comedor para subir la temperatura de la estancia"
                         android:textSize="17dp"/>
 
                     <ImageView
+                        android:id="@+id/suggestions_chev3"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="5dp"
                         android:src="@drawable/ic_chevron_right_grey600_48dp"/>
 
                 </RelativeLayout>
